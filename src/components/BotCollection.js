@@ -12,4 +12,4 @@ function BotCollection({botCollection, addOrRemoveBot}) {
         </div>
     );
 }
-
+export default BotCollection
