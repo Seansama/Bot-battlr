@@ -9,13 +9,16 @@ const botTypeClasses = {
     Captain: "icon star",
 };
 
-function Botcard({bot, addRemoveBot, inArmy, deleteBot}) {
+function BotCard({bot, addRemoveBot, inArmy, deleteBot}) {
+
     return (
         <div className="ui column">
             <div
                 className="ui card"
                 key={bot.id}
-                onClick={() => {addRemoveBot(bot, inArmy)}}
+                onClick={() => {
+                    addRemoveBot(bot, inArmy)
+                }}
             >
                 <div className="image">
                     <img alt="oh no!" src={bot.avatar_url}/>
@@ -33,10 +36,9 @@ function Botcard({bot, addRemoveBot, inArmy, deleteBot}) {
           <span>
             <i className="icon heartbeat"/>
               {bot.health}
-          </span>
-                    <span>
+          </span><span>
             <i className="icon lightning"/>
-                        {bot.damage}
+                    {bot.damage}
           </span>
                     <span>
             <i className="icon shield"/>
@@ -60,4 +62,4 @@ function Botcard({bot, addRemoveBot, inArmy, deleteBot}) {
     );
 }
 
-export default Botcard;
+export default BotCard;

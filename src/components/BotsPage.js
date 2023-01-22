@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
-import botCard from "./BotCard";
+import BotCard from "./BotCard";
 
 function BotsPage() {
     const [botCollection, setBotCollection] = useState([])
@@ -14,7 +14,7 @@ function BotsPage() {
     }, [])
 
     function deleteBot(bot) {
-        fetch(`http://localhost:8002/bots/${bot.id}`, {
+        fetch(`http://localhost:3000/bots/${bot.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -28,7 +28,7 @@ function BotsPage() {
 
     function addRemoveBot(bot, inArmy) {
         if (botArmy.includes(bot) && inArmy === true) {
-            setBotArmy(botArmy => [...botArmy, bot])
+            setBotArmy(botArmy.filter(({id}) => id !== bot.id));
         } else if (botArmy.includes(bot) === false) {
             setBotArmy(botArmy => [...botArmy, bot])
         }
