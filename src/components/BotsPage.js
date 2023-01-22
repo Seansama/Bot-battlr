@@ -26,18 +26,18 @@ function BotsPage() {
         })
     }
 
-    function addRemoveBot(bot, army) {
-        if (!botArmy.includes(bot)) {
+    function addRemoveBot(bot, inArmy) {
+        if (botArmy.includes(bot) && inArmy === true) {
             setBotArmy(botArmy => [...botArmy, bot])
-        } else if (botArmy.includes(bot) && army) {
-            setBotArmy(botArmy.filter(({id}) => id !== bot.id));
+        } else if (botArmy.includes(bot) === false) {
+            setBotArmy(botArmy => [...botArmy, bot])
         }
     }
 
     return (
         <div>
-            <YourBotArmy botArmy={botArmy} addRemoveBot={addRemoveBot}/>
-            <BotCollection botCollection={botCollection} addRemoveBot={addRemoveBot}/>
+            <YourBotArmy botArmy={botArmy} addRemoveBot={addRemoveBot} deleteBot={deleteBot}/>
+            <BotCollection botCollection={botCollection} addRemoveBot={addRemoveBot} deleteBot={deleteBot}/>
         </div>
     )
 }
