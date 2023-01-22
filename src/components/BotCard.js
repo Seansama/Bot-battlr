@@ -60,3 +60,5 @@ function Botcard({bot}) {
         </div>
     );
 }
+
+export default Botcard;
