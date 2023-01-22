@@ -8,3 +8,7 @@ const botTypeClasses = {
     Witch: "icon magic",
     Captain: "icon star",
 };
+
+function Botcard() {
+    
+}
