@@ -11,6 +11,8 @@ can custom build your own Bot Army! This is our app:
 - Discharge a bot from their service forever, by clicking the button marked
   "x".
 
+You can visit the deployed site [here](https://gleaming-kashata-d0f615.netlify.app/)
+
 **Installation and operation**
 
 - You will need to install a javascript package known as `JSON-server`
