@@ -11,7 +11,7 @@ can custom build your own Bot Army! This is our app:
 - Discharge a bot from their service forever, by clicking the button marked
   "x".
 
-You can visit the deployed site [here](https://gleaming-kashata-d0f615.netlify.app/)
+You can visit the deployed site [here](https://bot-battlr-fawn.vercel.app/)
 
 **Installation and operation**
 
