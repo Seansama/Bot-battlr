@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "PORT=8000 react-scripts start",
-    "server": "json-server --watch db.json -p 3000",
+    "server": "https://bot-battlr-json.vercel.app/",
     "build": "react-scripts build"
   },
   "eslintConfig": {
