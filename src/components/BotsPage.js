@@ -1,20 +1,19 @@
 import React, {useEffect, useState} from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
-import BotCard from "./BotCard";
 
 function BotsPage() {
     const [botCollection, setBotCollection] = useState([])
     const [botArmy, setBotArmy] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/bots')
+        fetch('https://bot-battlr-json.vercel.app/bots')
             .then(res => res.json())
             .then(data => setBotCollection(data))
     }, [])
 
     function deleteBot(bot) {
-        fetch(`http://localhost:3000/bots/${bot.id}`, {
+        fetch(`https://bot-battlr-json.vercel.app/bots/${bot.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
